@@ -14,6 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.LGSSINAVI">
         <activity
+            android:name=".DersProgramiActivity"
+            android:exported="false" />
+        <activity
             android:name=".DersTakipActivity"
             android:exported="false" />
         <activity

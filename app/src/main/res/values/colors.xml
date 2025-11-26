@@ -15,7 +15,7 @@
 
     <!-- RatingBar progress rengi -->
     <color name="rating_star_color">#FFC107</color>  <!-- Altın sarısı -->
-
+    <color name="card_background">#FFF3E0</color>
 
     <color name="bg">#0F1722</color>
     <color name="cardBg">#0B1220</color>
