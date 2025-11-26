@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="com.obiscr.chatgpt.settings.EasyCodeState">
+    <option name="projectFiles" value="$PROJECT_DIR$/app/src/androidTest/java/com/lgs/sinavi/ExampleInstrumentedTest.java;C:/Users/mroka/AndroidStudioProjects/LGSSINAVI/app/src/main/java/com/lgs/sinavi/MainActivity.java;C:/Users/mroka/AndroidStudioProjects/LGSSINAVI/app/src/test/java/com/lgs/sinavi/ExampleUnitTest.java;C:/Users/mroka/AndroidStudioProjects/LGSSINAVI/app/build.gradle.kts;C:/Users/mroka/AndroidStudioProjects/LGSSINAVI/build.gradle.kts;C:/Users/mroka/AndroidStudioProjects/LGSSINAVI/settings.gradle.kts" />
+  </component>
+</project>

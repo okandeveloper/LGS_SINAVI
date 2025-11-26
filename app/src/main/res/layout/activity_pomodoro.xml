@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg">
+
+    <!-- Dikey ana container -->
+    <LinearLayout
+        android:id="@+id/verticalContainer"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_margin="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="POMODORO"
+            android:textAllCaps="true"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.12"
+            android:layout_marginBottom="8dp"
+            android:textColor="@color/primaryText" />
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="25:00"
+            android:textSize="56sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"
+            android:textColor="@color/primaryText" />
+
+        <com.lgs.sinavi.PomodoroView
+            android:id="@+id/pomodoroView"
+            android:layout_width="260dp"
+            android:layout_height="260dp"
+            android:layout_marginBottom="16dp" />
+
+        <TextView
+            android:id="@+id/tvState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Çalışma"
+            android:textSize="16sp"
+            android:layout_marginBottom="18dp"
+            android:textColor="@color/secondaryText" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnStartPause"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Başlat" />
+
+            <Button
+                android:id="@+id/btnReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sıfırla"
+                android:layout_marginStart="12dp" />
+
+            <Button
+                android:id="@+id/btnSkip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Atla"
+                android:layout_marginStart="12dp" />
+
+            <!-- Ayarlar butonu BottomSheet açacak -->
+            <ImageButton
+                android:id="@+id/btnSettings"
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:src="@android:drawable/ic_menu_manage"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Ayarlar"
+                android:layout_marginStart="12dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!-- ⚠️ HATALI KISIM KALDIRILDI:
+    <com.google.android.material.bottomsheet.BottomSheetBehavior ...>
+    BU BİR VIEW DEĞİL VE XML'E EKLENMEZ!
+    -->
+
+
+    <!-- DOĞRU BOTTOM SHEET EKLEME -->
+    <include
+        android:id="@+id/bottomSheet"
+        layout="@layout/bottom_sheet_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

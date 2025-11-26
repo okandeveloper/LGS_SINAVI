@@ -13,34 +13,454 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="90dp">
+        android:layout_height="wrap_content">
+
         <LinearLayout
+            android:layout_margin="10dp"
             android:orientation="horizontal"
-            android:layout_gravity="center"
-            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
             <ImageView
-                android:layout_width="65dp"
+                android:layout_marginTop="10dp"
+                android:layout_width="50dp"
                 android:layout_height="65dp"
-                android:src="@drawable/logo"
-                android:layout_gravity="center"
-                />
+                android:src="@drawable/logo" />
+
             <TextView
-                android:layout_gravity="center"
-                android:gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="bottom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="LGS SINAVI"
-                android:fontFamily="@font/poppins"
+                android:text="LGS SINAVI 2026"
+                android:fontFamily="@font/poppins_bold"
                 android:textStyle="bold"
+                android:textSize="22sp"
                 android:textColor="@color/black"/>
+
+            <!-- SAĞA İTMEK İÇİN BOŞLUK -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1" />
+
+            <!-- SHARE ICON VE YAZI (SAĞDA) -->
+            <LinearLayout
+                android:id="@+id/share_icon"
+                android:orientation="horizontal"
+                android:layout_gravity="end|bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/share" />
+
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Paylaş"
+                    android:fontFamily="@font/poppins"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:textColor="@color/black"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+
+    <LinearLayout
+       android:padding="5dp"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical">
+       <TextView
+           android:gravity="center"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="SINAVA KAÇ GÜN KALDI"
+           android:layout_margin="10dp"
+           android:textColor="@color/blue"
+           android:textStyle="bold"
+           android:fontFamily="@font/poppins_bold"
+           android:textSize="20sp"/>
+
+       <LinearLayout
+
+           android:id="@+id/countContainer"
+           android:orientation="horizontal"
+           android:gravity="center"
+           android:layout_width="match_parent"
+           android:layout_height="match_parent">
+
+
+           <!-- GÜN -->
+           <LinearLayout
+               android:orientation="vertical"
+               android:gravity="center"
+               android:layout_width="85dp"
+               android:layout_height="100dp"
+               android:background="@drawable/student_box_day"
+               android:layout_margin="6dp">
+
+               <TextView
+                   android:id="@+id/txtDay"
+                   android:text="0"
+                   android:textColor="@color/white"
+                   android:textSize="26sp"
+                   android:fontFamily="@font/poppins_bold"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+               <TextView
+                   android:text="Gün"
+                   android:textColor="@color/white"
+                   android:textSize="14sp"
+                   android:fontFamily="@font/poppins"
+                   android:layout_marginTop="4dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+           </LinearLayout>
+
+           <!-- SAAT -->
+           <LinearLayout
+               android:orientation="vertical"
+               android:gravity="center"
+               android:layout_width="85dp"
+               android:layout_height="100dp"
+               android:background="@drawable/student_box_hour"
+               android:layout_margin="6dp">
+
+               <TextView
+                   android:id="@+id/txtHour"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:fontFamily="@font/poppins_bold"
+                   android:text="0"
+                   android:textColor="@color/white"
+                   android:textSize="26sp" />
+
+               <TextView
+                   android:text="Saat"
+                   android:textColor="@color/white"
+                   android:textSize="14sp"
+                   android:fontFamily="@font/poppins"
+                   android:layout_marginTop="4dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+           </LinearLayout>
+
+           <!-- DAKİKA -->
+           <LinearLayout
+               android:orientation="vertical"
+               android:gravity="center"
+               android:layout_width="85dp"
+               android:layout_height="100dp"
+               android:background="@drawable/student_box_min"
+               android:layout_margin="6dp">
+
+               <TextView
+                   android:id="@+id/txtMin"
+                   android:text="0"
+                   android:textColor="@color/white"
+                   android:textSize="26sp"
+                   android:fontFamily="@font/poppins_bold"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+               <TextView
+                   android:text="Dakika"
+                   android:textColor="@color/white"
+                   android:textSize="14sp"
+                   android:fontFamily="@font/poppins"
+                   android:layout_marginTop="4dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+           </LinearLayout>
+
+           <!-- SANİYE -->
+           <LinearLayout
+               android:orientation="vertical"
+               android:gravity="center"
+               android:layout_width="85dp"
+               android:layout_height="100dp"
+               android:background="@drawable/student_box_sec"
+               android:layout_margin="6dp">
+
+               <TextView
+                   android:id="@+id/txtSec"
+                   android:text="0"
+                   android:textColor="@color/white"
+                   android:textSize="26sp"
+                   android:fontFamily="@font/poppins_bold"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+
+               <TextView
+                   android:text="Saniye"
+                   android:textColor="@color/white"
+                   android:textSize="14sp"
+                   android:fontFamily="@font/poppins"
+                   android:layout_marginTop="4dp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"/>
+           </LinearLayout>
+
+       </LinearLayout>
+   </LinearLayout>
+
+    <!-- ✔ MOTİVASYON BÖLÜMÜ -->
+    <androidx.cardview.widget.CardView
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp">
+
+        <LinearLayout
+            android:padding="15dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bugün çalıştığın her sayfa seni rakiplerinin bir adım önüne taşır! 💪📚"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:fontFamily="@font/poppins"
+                android:layout_marginBottom="5dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hadi şimdi hedefe odaklan! 🚀"
+                android:textColor="@color/blue"
+                android:textStyle="bold"
+                android:textSize="17sp"
+                android:fontFamily="@font/poppins_bold"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+
+    <!-- ✔ 4 ADET MENÜ BUTONU -->
+    <LinearLayout
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- 1. SATIR: Pomodoro - Ders Programı -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnPomodoro"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/pomodoro"/>
+
+                    <TextView
+
+                        android:text="Pomodoro"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textColor="@color/black"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnDersProgrami"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/books"/>
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Ders Programı"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <!-- 2. SATIR: Ders Takip - Konular -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnDersTakip"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/derstakip"/>
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Ders Takip"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/btnKonular"
+                android:layout_width="0dp"
+                android:layout_height="90dp"
+                android:layout_margin="6dp"
+                android:layout_weight="1"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/konular"/>
+
+                    <TextView
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:text="Konular"
+                        android:textSize="15sp"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textColor="@color/black"/>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!-- ✔ PUAN VER BÖLÜMÜ -->
+    <androidx.cardview.widget.CardView
+
+        android:backgroundTint="#FFEE58"
+        android:layout_margin="12dp"
+        android:layout_marginBottom="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="6dp">
+
+        <LinearLayout
+            android:background="@drawable/rating_card_bg"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:text="Uygulamayı Nasıl Buldun?"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <!-- ⭐ RatingBar -->
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:numStars="5"
+                android:stepSize="1"
+                android:rating="5"
+                android:layout_marginTop="2dp"
+                android:layout_marginBottom="2dp"
+                style="?android:attr/ratingBarStyleSmall"/>
+
+
+            <!-- ✔ Gönder Butonu -->
+            <TextView
+                android:text="Yorumunu Gönder"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
 
 
 
         </LinearLayout>
+
     </androidx.cardview.widget.CardView>
+
+
+
 
 
 

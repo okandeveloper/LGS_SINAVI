@@ -2,4 +2,31 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="blue">#3a86ff</color>
+
+    <color name="gradient_start">#FFEE58</color>  <!-- Açık sarı -->
+    <color name="gradient_end">#FFC107</color>    <!-- Turuncu sarı -->
+
+    <!-- Buton rengi -->
+    <color name="amber_700">#FFA000</color>      <!-- Koyu turuncu -->
+    <color name="amber_800">#FF8F00</color>      <!-- Daha koyu turuncu -->
+
+
+
+    <!-- RatingBar progress rengi -->
+    <color name="rating_star_color">#FFC107</color>  <!-- Altın sarısı -->
+
+
+    <color name="bg">#0F1722</color>
+    <color name="cardBg">#0B1220</color>
+    <color name="primaryText">#FFFFFF</color>
+    <color name="secondaryText">#B9C1CC</color>
+    <color name="tertiaryText">#9AA6B3</color>
+    <color name="accent">#FF6B6B</color>
+    <color name="progressBackground">#24303A</color>
+    <color name="innerCircle">#071019</color>
+
+    <!-- Mola animasyonu için renkler (mavi -> mor) -->
+    <color name="breakColorStart">#4F8BFF</color>
+    <color name="breakColorEnd">#8B4FFF</color>
 </resources>
