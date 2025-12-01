@@ -33,7 +33,20 @@ public class MainActivity extends AppCompatActivity {
         CardView btnPomodoro = findViewById(R.id.btnPomodoro);
         CardView btnDersTakip = findViewById(R.id.btnDersTakip);
         CardView btnDersProgrami = findViewById(R.id.btnDersProgrami);
+        CardView btnKonular = findViewById(R.id.btnKonular);
 
+        btnKonular.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Eğer PomodoroActivity'ye bazı ayarlar/parametreler göndermek isterseniz,
+                // intent.putExtra("workMinutes", 25); gibi ekleyebilirsiniz.
+                Intent intent = new Intent(MainActivity.this, KonularEkrani.class);
+                startActivity(intent);
+                // Eğer MainActivity'yi kapatmak isterseniz uncomment yapın:
+                // finish();
+            }
+        });
         btnPomodoro.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

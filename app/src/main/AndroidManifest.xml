@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -13,6 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.LGSSINAVI">
+        <activity
+            android:name=".YoutubeEkrani"
+            android:exported="false" />
+        <activity
+            android:name=".KonularEkrani"
+            android:exported="false" />
+
         <activity
             android:name=".DersProgramiActivity"
             android:exported="false" />
